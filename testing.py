@@ -1,3 +1,1 @@
-import math;
-
-print(math.sqrt(4));
+print(len("       NOMBRE       TIPO GAS PRECIO/lt. CANT.(lts) COSTO GAS COSTO LAV  A PAGAR  "))

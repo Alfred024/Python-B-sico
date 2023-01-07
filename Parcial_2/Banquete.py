@@ -32,5 +32,5 @@ row2Format = "PRESUPUESTO PARA: "+cliente+"\n";
 print(row2Format);
 row3Format = "N0.PERSONAS TIPO MENU  CUENTA DESCUENTO A PAGAR";
 print(row3Format.center(46));
-row4Format = str(numPersonas).center(12)+str(tipoMenu).center(11)+str(cuenta)+str(descuento).center(12)+str(pago).center(8);
+row4Format = str(numPersonas).center(20)+str(tipoMenu).center(11)+str(cuenta)+str(descuento).center(12)+str(pago).center(8);
 print(row4Format);
