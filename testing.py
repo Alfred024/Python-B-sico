@@ -1,29 +1,11 @@
-alumno = {
-        "nombre": "Juán López",
-        "promedio": 75,
-        "credsAprobs": 90,
-        "semestre": 6
-    }
-alumno2 = {
-        "nombre": "Vicente Álvarez",
-        "promedio": 49,
-        "credsAprobs": 30,
-        "semestre": 2
-    };
-alumno3 = {
-        "nombre": "Luis Soto",
-        "promedio": 79,
-        "credsAprobs": 80,
-        "semestre": 13
-    };
-alumno4 = {
-        "nombre": "Vicente Álvarez",
-        "promedio": 82,
-        "credsAprobs": 60,
-        "semestre": 4
-    };
+import random
+numAleatorio = random.randint(100, 999)
+print("Número aleatorio: ", numAleatorio)
 
-alumnosRegistro = [alumno, alumno2, alumno3, alumno4];
+unidad = int((str(numAleatorio))[2]);
+decena = int((str(numAleatorio))[1]);
+centena = int((str(numAleatorio))[0]);
 
-print("Alumno #1: ")
-print(alumnosRegistro[0].get("nombre"));
+print(unidad);
+print(decena);
+print(centena);
