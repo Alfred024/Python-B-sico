@@ -9,12 +9,12 @@ horaFormato = str(hora.strftime("%H:%M:%S"));
 horaFormato = horaFormato[0:5];
 
 row1Format = "TECNOLÓGICO LINCE";
-print(row1Format.center(52));
+print(row1Format.center(65));
 row2Format = "REPORTE DE INSCRIPCIONES";
-print(row2Format.center(52));
-row3Format = "FECHA: dd/mm/aaaa HORA: hh:mm";
-print(row3Format.center(52));
-row4Format = " NOMBRE PROMEDIO % CRÉDITOS APROB. SEM. MENSAJE DÍA ";
+print(row2Format.center(65));
+row3Format = "FECHA: "+ str(fechaFormato) +"         HORA: "+str(horaFormato);
+print(row3Format.center(65));
+row4Format = "      NOMBRE        PROMEDIO %CRÉDITOS APROB.  SEM.   MENSAJE   DÍA ";
 print(row4Format.center(52));
 
 def diaInscripcion(p_promedio, p_semestre):
@@ -57,25 +57,23 @@ alumno3 = {
         "semestre": 13
     };
 alumno4 = {
-        "nombre": "Vicente Álvarez",
+        "nombre": "Beatriz García",
         "promedio": 82,
         "credsAprobs": 60,
         "semestre": 4
     };
 
 alumnosRegistro = [alumno, alumno2, alumno3, alumno4];
-print(alumnosRegistro[0].get("nombre")); #Así acccedo al "key" nombre de
 
-for i in alumnosRegistro:
-    nombre = alumnosRegistro[i].get("nombre");
-    credsAprobs = alumnosRegistro[i].get("credsAprobs");
-    semestre = alumnosRegistro[i].get("semestre");
-    promedio = alumnosRegistro[i].get("promedio");
+for alumnoX in alumnosRegistro:
+    nombre = alumnoX.get("nombre");
+    credsAprobs = alumnoX.get("credsAprobs");
+    semestre = alumnoX.get("semestre");
+    promedio = alumnoX.get("promedio");
     mensaje = inscritoObaja(credsAprobs, semestre);
     if(mensaje == "BAJA"):
         dia = 0;
     else:
         dia = diaInscripcion(promedio, semestre);
-    #rowAlumnoFormat = alumnosRegistro[i].get("nombre");
-    pass;
-
+    rowAlumnoFormat = nombre.center(18)+" "+(str(promedio)).center(9)+" "+(str(credsAprobs)).center(16)+" "+(str(semestre)).center(5)+" "+mensaje.center(10)+" "+(str(dia)).center(5);
+    print(rowAlumnoFormat);
